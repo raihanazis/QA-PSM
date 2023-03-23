@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap"></div>
+    <script>
+        /*
+        1. memilih id warap 
+        2. metode inner html untuk menulis konten
+        */
+        //variabel adalah penanda untuk menampung suatu nilai
+        //tipe data string
+        var text = "sekolah koding";
+        var text2 = " yang baru";
+
+        //tipe data number
+        var angka = 1000;
+        var angka2 =  123.12123;
+        var angka3 = 0.2;
+
+        //kiri = nama -> kanan = nilai
+        // text2 = " yang lama";
+        // var angka_baru = angka + angka2;
+        // angka_baru++;
+        // angka_baru--;
+
+        // angka--;
+        // angka2 += angka;
+
+        //tofixed() untuk mengambil angka dengan maksimal digit belakang
+        //tostring adalah untuk merubah menjadi string
+        // min untuk mencari angka terendah dan max untuk mencari angka tertinggi
+        var angka_baru = Math.min(angka, angka2, angka3);
+
+        var angka_baru = Math.max(angka, angka2, angka3);
+        //untuk membulatkan ke angka terdekat
+        var angka_baru = Math.round(angka2);
+        //untuk membulatkan ke atas
+        var angka_baru = Math.ceil(angka2);
+        //untuk membulatkan ke bawah
+        var angka_baru = Math.floor(angka2);
+
+        //indexof mencari letak string lastindexof mencari letak string  search chartAt
+        // toUppercase merubah string menjadi kapital toLowercase merubah string menjadi huruf kecil
+        // replace merubah string menjadi kata yang ditulis 
+        // substring(start, end) substr(start, length) 
+        //parseInt parsefloat
+
+        var nama = "120.22";
+        var hasil = parseFloat(nama) + 10;
+        
+
+
+        document.getElementById("wrap").innerHTML = hasil;
+
+    </script>
+</body>
+</html>
