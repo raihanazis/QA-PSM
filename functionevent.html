@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Hasil: </label>
+    <div id="hasil"></div>
+    <input type="text1" name="text1" id="text1" placeholder="Angka 1">
+    <input type="text2" name="text2" id="text2" placeholder="Angka 2">
+    <input type="submit" onclick="Check()"> 
+    <input type="submit" id="popup" value="Popup">
+
+    <script>
+     /* Event adalah sebuah tindakan yang dilakukan oleh user
+     seperti mengklik tombol mouse atau menekan tombol keyboard
+     dalam contoh ini event berjalan ketika pengguna melakukan 
+     klik pada tombol Popup yang mana akan menghasilkan popup 
+     dari penambahan
+     */
+    var popup = document.getElementById("popup");
+
+    popup.addEventListener("click", function() {
+        var text1 = document.getElementById("text1").value;
+        var text2 = document.getElementById("text2").value;
+        var hasil2 = Calculate(text1, text2)
+        window.alert(hasil2);
+    });
+
+    /* fungsi adalah sebuah blok kode untuk mengeksekusi tugas tertentu
+    yang mana dapat dipanggil dan digunakan kembali dalam program
+    */
+    function Calculate(a, b) {
+        return a * b;
+    }
+
+    /* Event adalah sebuah tindakan yang dilakukan oleh user
+     seperti mengklik tombol mouse atau menekan tombol keyboard
+     dalam contoh ini event berjalan ketika pengguna melakukan 
+     klik pada tombol submit yang mana hasil dari perkalian
+     input text 1 dan 2 akan keluar
+     */
+         
+    function Check() {
+        var text1 = document.getElementById("text1").value;
+        var text2 = document.getElementById("text2").value;
+
+        var hasil = Calculate(text1, text2)
+        document.getElementById("hasil").innerHTML = hasil;
+       }
+    </script>
+</body>
+</html>
