@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condition and Loop</title>
+</head>
+<body>
+    <label>Hasil: </label>
+    <div id="hasil_conditionloop"></div>
+    <input type="text1" id="text1" placeholder="Angka1">
+    <input type="text2" id="text2" placeholder="Angka2"> <br> <br>
+    <input type="submit" onclick="Condition()" value="Condition">
+    <input type="submit" onclick="Loopfor()" value="Loop `for`">
+    <input type="submit" onclick="Loopwhile()" value="Loop `while`">
+
+    <script>
+        /* Condition dalam JavaScript menggunakan struktur "if-else" 
+        untuk memeriksa apakah kondisi tertentu benar atau salah. 
+        Jika kondisi benar, kode yang terkait dengan itu akan dieksekusi. 
+        Jika kondisi salah, maka kode yang terkait dengan "else" akan dieksekusi.
+        */
+        function Condition() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+
+            if (text1 > text2) {
+                document.getElementById("hasil_conditionloop").innerHTML = "Angka 1 lebih besar dari Angka 2";
+            } else {
+                document.getElementById("hasil_conditionloop").innerHTML = "Angka 1 lebih kecil atau sama dengan Angka 2";
+            }
+        }
+
+        /* 
+        Perulangan for merupakan perulangan yang termasuk dalam couted loop,
+        karena sudah jelas berapa kali ia akan mengulang. (Petanikode)
+        Loop "for" digunakan untuk melakukan iterasi
+        melalui sebuah array atau rangkaian nilai lainnya, 
+        sambil melakukan aksi tertentu di setiap iterasi.
+        */
+        function Loopfor() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+
+            for (let i = text1; i < text2; i++) {
+                document.getElementById("hasil_conditionloop").innerHTML = i;
+            }
+        }
+        /* 
+        Perulangan while merupakan perulangan yang termasuk 
+        dalam perulangan uncounted loop. (Petanikode)
+        Loop "while" digunakan untuk melakukan iterasi melalui 
+        sebuah blok kode selama kondisi tertentu benar. 
+        */
+        function Loopwhile() {
+            var text1 = document.getElementById("text1").value;
+            var text2 = document.getElementById("text2").value;
+
+            let i = 0;
+                while (text1 < text2) {
+                document.getElementById("hasil_conditionloop").innerHTML = i;
+                i++;
+            }
+        }
+    </script>
+</body>
+</html>

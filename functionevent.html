@@ -11,7 +11,12 @@
     <div id="hasil"></div>
     <input type="text1" name="text1" id="text1" placeholder="Angka 1">
     <input type="text2" name="text2" id="text2" placeholder="Angka 2">
-    <input type="submit" onclick="Check()"> 
+    <br>
+    <br>
+    <input type="submit" onclick="Calculate_kali()" value="*"> 
+    <input type="submit" onclick="Calculate_bagi()" value="/"> 
+    <input type="submit" onclick="Calculate_tambah()" value="+"> 
+    <input type="submit" onclick="Calculate_kurang()" value="-"> 
     <input type="submit" id="popup" value="Popup">
 
     <script>
@@ -30,25 +35,81 @@
         window.alert(hasil2);
     });
 
-    /* fungsi adalah sebuah blok kode untuk mengeksekusi tugas tertentu
+    /* 
+    fungsi adalah sebuah blok kode untuk mengeksekusi tugas tertentu
     yang mana dapat dipanggil dan digunakan kembali dalam program
     */
-    function Calculate(a, b) {
+    
+    /* 
+    fungsi untuk melakukan perkalian
+    */
+    function Kali(a, b) {
         return a * b;
+    }
+    /* 
+    fungsi untuk melakukan pembagian
+    */
+    function Bagi(a, b) {
+        return a / b;
+    }
+    /* 
+    fungsi untuk melakukan penambahan
+    */
+    function Tambah(a, b) {
+        return a + b;
+    }
+    /* 
+    fungsi untuk melakukan pengurangan
+    */
+    function Kurang(a, b) {
+        return a - b;
     }
 
     /* Event adalah sebuah tindakan yang dilakukan oleh user
      seperti mengklik tombol mouse atau menekan tombol keyboard
      dalam contoh ini event berjalan ketika pengguna melakukan 
-     klik pada tombol submit yang mana hasil dari perkalian
+     klik pada tombol submit yang mana hasil dari penjumlahan
      input text 1 dan 2 akan keluar
-     */
-         
-    function Check() {
+    */
+    
+    /* 
+    Event untuk melakukan perkalian
+    */  
+    function Calculate_kali() {
         var text1 = document.getElementById("text1").value;
         var text2 = document.getElementById("text2").value;
 
-        var hasil = Calculate(text1, text2)
+        var hasil = Kali(text1, text2)
+        document.getElementById("hasil").innerHTML = hasil;
+       }
+    /* 
+    Event untuk melakukan pembagian
+    */
+    function Calculate_bagi() {
+        var text1 = document.getElementById("text1").value;
+        var text2 = document.getElementById("text2").value;
+
+        var hasil = Bagi(text1, text2)
+        document.getElementById("hasil").innerHTML = hasil;
+       }
+    /* 
+    Event untuk melakukan penambahan
+    */
+    function Calculate_tambah() {
+        var text1 = document.getElementById("text1").value;
+        var text2 = document.getElementById("text2").value;
+
+        var hasil = Tambah(text1, text2)
+        document.getElementById("hasil").innerHTML = hasil;
+       }
+    /* 
+    Event untuk melakukan pengurangan
+    */
+    function Calculate_kurang() {
+        var text1 = document.getElementById("text1").value;
+        var text2 = document.getElementById("text2").value;
+
+        var hasil = Kurang(text1, text2)
         document.getElementById("hasil").innerHTML = hasil;
        }
     </script>
