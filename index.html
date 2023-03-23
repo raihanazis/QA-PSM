@@ -8,7 +8,95 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Heading: menentukan bagian2 penting yang berisi text dari file html -->
+    <h1>
+        Selamat Datang, {$nama}!
+    </h1>
+    <!-- paragraf untuk text biasa -->
+    <p>Anda memiliki tunggakan pembayaran!</p>
+    <!-- link menggunakan atribut-->
+    <a href="www.google.com">Google</a>
+    <!-- link yang membuat tab baru -->
+    <a href="www.google.com" target="_blank">Google</a>
     <!-- Focus pembelajaran pada form Tags	input, textarea, select, input types (checkbox, radio, etc...) -->
-    
+    <!-- menampilkan gambar, penggunaan alt untuk penjelasan gambar, height digunakan untuk mengatur tinggi, width untuk mengatur lebar -->
+    <img src="src/images/1.webp" alt="samsung z fold 4" height="200" width="100">
+
+    <iframe src="www.facebook.com"></iframe>
+
+    <!-- border digunakan untuk memperjelas garis -->
+    <table border="1">
+        <!-- table row -->
+        <caption>Nama</caption>
+        <tr>
+            <td>
+                Nama
+            </td>
+            <td>Asal</td>
+        </tr>
+        <tr>
+            <td>
+                Raihan
+            </td>
+            <td>Depok</td>
+        </tr>
+    </table>
+
+    <!-- list html  -->
+    <!-- list tidak berurutan -->
+    <ul>
+        <li>Raihan</li>
+        <li>Azis</li>
+    </ul>
+    <!-- list yang berurutan -->
+    <ol>
+        <li>Raihan</li>
+        <li>Azis</li>
+    </ol>
+    <!-- membuat data list -->
+    <dl>
+        <dt>
+            Raihan
+        </dt>
+        <dd>
+            Adalah seorang manusia
+        </dd>
+    </dl>
+
+    <form>
+        <fieldset>
+        <label for="nama">Nama</label>
+        <input type="text" placeholder="Nama user" id="nama"> <!-- untuk input yang lebih sedikit-->
+        <br>
+        <label for="pesan">Pesan</label>
+        <textarea cols="100" rows="7" id="pesan">Pesan</textarea> <!-- untuk input yang lebih banyak-->
+        <br>
+        <label>Hobi</label> <br>
+        <!-- checkbox digunakan untuk memilih lebih dari satu -->
+        <input type="checkbox" name="hobi_user" value="Menulis" checked> Menulis <br>
+        <input type="checkbox" name="hobi_user" value="Memancing keributan"> Memancing keributan <br>
+        <br>
+        <label>Jenis kelamin</label> <br>
+        <!-- radio button digunakan untuk memilih salah satu -->
+        <input type="radio" name="gender" value="0" checked> Pria <br>
+        <input type="radio" name="gender" value="1"> Wanita <br>
+        <br>
+        <!-- untuk pemilihan dengan banyak list -->
+        <label>Kategori</label>
+        <select>
+            <optgroup label="backend">
+            <option value="Database">Database</option>
+        </optgroup>
+        <optgroup label="frontend">
+            <option value="UI">UI</option>
+            <option value="UX">UX</option>
+        </optgroup>
+            <option value="Web Programming">Web Programming</option>
+            <option value="Mobile Programming">Mobile Programming</option>
+        </select>
+        <br>
+        <input type="submit" value="Send">
+    </fieldset>
+    </form>
 </body>
 </html>
