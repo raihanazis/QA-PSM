@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Global scope adalah area di mana variabel dan fungsi dapat 
+        diakses dari seluruh kode JavaScript. Variabel dan fungsi 
+        yang dideklarasikan di luar blok fungsi atau objek 
+        akan menjadi bagian dari global scope.
+        */
+
+        /* 
+        variabel a dideklarasikan di global scope
+        */
+        var a = 10;
+
+        /* 
+        variabel a dapat diakses dari dalam fungsi 
+        */
+        function PrintA() {
+            console.log(a);
+        }
+
+        /* 
+        output: 10
+        */
+        PrintA();
+
+        /* 
+        Local scope adalah area di mana variabel dan fungsi 
+        hanya dapat diakses dari dalam blok fungsi atau objek 
+        tempat mereka dideklarasikan.
+        */
+
+        /* 
+        variabel b dideklarasikan di local scope fungsi PrintB()
+        */
+        function PrintB() {
+            var b = 20;
+            /* 
+             variabel b dapat diakses dari dalam fungsi 
+             karena variabel tersebut ada di local scope
+            */
+            console.log(b);
+        }
+
+        /* 
+        variabel b dideklarasikan di local scope fungsi PrintB()
+        */
+        PrintB();
+
+        /* 
+        ReferenceError: b is not defined, karena variabel b 
+        hanya dapat diakses dari dalam fungsi PrintB()
+        */
+        console.log(b);
+
+        /* 
+        Hoisting variabel: Variabel JavaScript yang dideklarasikan 
+        dengan kata kunci var akan ditinggikan ke atas 
+        dari blok scope tempat mereka dideklarasikan. 
+        Namun, nilai variabel tidak akan diangkat, 
+        sehingga jika Anda mencoba mengakses variabel sebelum dideklarasikan, 
+        nilai variabel akan undefined.
+        */
+
+        console.log(a); // output: undefined
+        var a = 10; // variabel a dideklarasikan setelah kode console.log, namun tetap dapat diakses karena hoisting
+
+        console.log(b); // ReferenceError: b is not defined, karena variabel b belum dideklarasikan
+
+        /* 
+       Hoisting fungsi: Deklarasi fungsi JavaScript, 
+       baik yang dideklarasikan dengan kata kunci function atau 
+       function expression, akan ditinggikan ke atas dari blok scope 
+       tempat mereka dideklarasikan. Ini berarti Anda dapat memanggil 
+       fungsi sebelum deklarasi fungsi, 
+       karena fungsi akan tersedia pada saat kode dieksekusi.
+        */
+
+        myFunction(); // output: "Hello World!"
+
+        function myFunction() {
+            console.log("Hello World!");
+        }
+
+    </script>
+</body>
+</html>
