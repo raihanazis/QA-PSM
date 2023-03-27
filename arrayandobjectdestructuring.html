@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Array dan object destructuring adalah fitur pada JavaScript 
+        yang memungkinkan kita untuk mengeluarkan (unpack) elemen-elemen 
+        dari sebuah array atau properti-properti dari sebuah objek ke dalam 
+        variabel yang terpisah.
+        */
+
+        const numbers = [1, 2, 3];
+
+        const [a, b, c] = numbers;
+
+        console.log(a); // Output: 1
+        console.log(b); // Output: 2
+        console.log(c); // Output: 3
+
+        const person = { name: 'John', age: 30, location: 'New York' };
+
+        const { name, age, location } = person;
+
+        console.log(name); // Output: 'John'
+        console.log(age); // Output: 30
+        console.log(location); // Output: 'New York'
+
+    </script>
+</body>
+</html>

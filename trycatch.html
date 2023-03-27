@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Try-Catch-Finally adalah sebuah mekanisme yang digunakan pada JavaScript 
+        untuk menangani kesalahan pada sebuah blok kode atau operasi 
+        yang mungkin dapat menghasilkan error atau exception.
+        */
+
+        function divide(num1, num2) {
+        try {
+            if (num2 === 0) {
+            throw new Error('Division by zero');
+            }
+            return num1 / num2;
+        } catch (error) {
+            console.error(error.message);
+        } finally {
+            console.log('Operation finished');
+        }
+        }
+
+        console.log(divide(10, 5)); // Output: 2
+        console.log(divide(10, 0)); // Output: Division by zero, Operation finished
+
+        /*
+        Pada contoh di atas, kita membuat sebuah fungsi bernama divide yang menerima dua parameter. 
+        Di dalam fungsi ini, kita mengecek apakah nilai num2 sama dengan 0.
+        Jika benar, maka kita melemparkan sebuah error dengan menggunakan throw new Error(). 
+        Jika tidak, maka kita mengembalikan hasil pembagian num1 dengan num2.
+        */
+    </script>
+</body>
+</html>

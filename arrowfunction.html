@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            Arrow function adalah sintaks yang lebih pendek dan ringkas untuk mendefinisikan fungsi dalam JavaScript. 
+            Arrow function memungkinkan penulisan kode yang lebih singkat dan mudah dibaca. 
+        */
+        const add = (a, b) => a + b;
+            
+            console.log(add(2, 3)); // Output: 5
+
+            const person = {
+            name: 'John',
+            sayHello: function() {
+                console.log(`Hello, my name is ${this.name}.`);
+            },
+            sayHi: () => {
+                console.log(`Hi, my name is ${this.name}.`);
+            }
+            };
+
+            person.sayHello(); // Output: Hello, my name is John.
+            person.sayHi(); // Output: Hi, my name is undefined.
+
+            function sum() {
+                const sumValues = () => {
+                    let sum = 0;
+                    for (let i = 0; i < arguments.length; i++) {
+                    sum += arguments[i];
+                    }
+                    return sum;
+                };
+                return sumValues();
+                }
+
+                console.log(sum(2, 3, 4)); // Output: 9
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Module import dan export adalah fitur pada JavaScript 
+        yang memungkinkan kita untuk mengimpor kode dari file 
+        JavaScript lain atau mengekspor kode dari file JavaScript kita sendiri. 
+        Dengan menggunakan fitur ini, kita bisa memisahkan kode-kode kita 
+        ke dalam beberapa file yang terpisah, sehingga memudahkan kita dalam mengelola 
+        kode-kode kita.
+        */
+
+        // File: utils.js
+
+        export function add(a, b) {
+        return a + b;
+        }
+
+        // File: main.js
+
+        import { add } from './utils.js';
+
+        const result = add(1, 2);
+        console.log(result); // Output: 3
+
+
+    </script>
+</body>
+</html>

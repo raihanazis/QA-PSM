@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Asynchronous programming merupakan konsep penting dalam JavaScript 
+        yang memungkinkan kita untuk mengeksekusi operasi tanpa harus menunggu 
+        operasi sebelumnya selesai dilakukan.
+        */
+
+        /*
+        Fungsi setTimeout digunakan untuk menjalankan suatu kode setelah waktu tertentu. 
+        Fungsi ini menerima dua parameter, yaitu fungsi callback dan waktu delay dalam milidetik.
+        */
+
+        console.log('Hello');
+
+        setTimeout(() => {
+        console.log('World');
+        }, 1000);
+
+        console.log('!');
+
+        /*
+       Fungsi setInterval digunakan untuk menjalankan suatu kode secara berulang-ulang dalam waktu tertentu. 
+       Fungsi ini menerima dua parameter, yaitu fungsi callback dan waktu delay dalam milidetik.
+        */
+
+        let count = 0;
+
+        const interval = setInterval(() => {
+        console.log(count);
+        count++;
+
+        if (count > 5) {
+            clearInterval(interval);
+        }
+        }, 1000);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Promise merupakan salah satu konsep fundamental dalam pemrograman asynchronous pada JavaScript. 
+        Promise digunakan untuk menangani operasi asynchronous dan mengembalikan nilai (resolved value) 
+        atau pesan error (rejected value) setelah operasi selesai dilakukan.
+        */
+
+        const promiseExample = new Promise((resolve, reject) => {
+        // perform some asynchronous operation
+        const result = Math.floor(Math.random() * 10);
+
+        if (result % 2 === 0) {
+            resolve(result);
+        } else {
+            reject(new Error('Odd number'));
+        }
+        });
+
+        promiseExample.then((result) => {
+        console.log(`Promise resolved with result: ${result}`);
+        }).catch((error) => {
+        console.error(`Promise rejected with error: ${error.message}`);
+        });
+
+        /*
+        Pada contoh di atas, kita membuat sebuah promise yang mengembalikan nilai acak antara 0 dan 9. 
+        Jika nilai tersebut genap, maka promise akan di-resolve dengan nilai tersebut. 
+        Namun, jika nilai tersebut ganjil, maka promise akan di-reject dengan pesan error 
+        'Odd number'. Kemudian, kita menggunakan method then untuk menangani kondisi resolved, 
+        dan method catch untuk menangani kondisi rejected.
+        */
+
+    </script>
+</body>
+</html>

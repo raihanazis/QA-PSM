@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        Ketika sebuah data disalin ke dalam variabel dan kemudian 
+        variabel tersebut dipassing ke sebuah function, 
+        maka data tersebut disalin nilainya (value) ke dalam parameter function. 
+        Ini disebut Pass by Value. Dalam Pass by Value, ketika nilai suatu variabel diubah
+         dalam function, nilai variabel tersebut tidak berubah di luar function.
+        */
+        function changeValue(a) {
+            a = 2;
+        }
+
+            let b = 1;
+            changeValue(b);
+            console.log(b); // Output: 1
+
+        /* 
+        Ketika sebuah objek disalin ke dalam variabel dan kemudian variabel tersebut 
+        dipassing ke sebuah function, maka objek tersebut disalin referensinya (reference) 
+        ke dalam parameter function. Ini disebut Pass by Reference. 
+        Dalam Pass by Reference, ketika nilai suatu properti objek diubah dalam function, 
+        nilai properti tersebut berubah juga di luar function.
+        */
+
+        function changeObjectValue(obj) {
+            obj.a = 2;
+            }
+
+            let c = { a: 1 };
+            changeObjectValue(c);
+            console.log(c.a); // Output: 2
+
+
+
+    </script>
+</body>
+</html>

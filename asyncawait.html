@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Async/Await adalah salah satu cara untuk menangani operasi asynchronous pada JavaScript. 
+        Async/Await memungkinkan kita untuk menulis kode asynchronous seperti kode synchronous, 
+        sehingga membuat kode lebih mudah dibaca dan dipahami.
+        */
+
+        /*
+        Await adalah sebuah kata kunci yang digunakan 
+        untuk menunggu hingga sebuah promise di-resolve atau di-reject.
+        */
+
+        /* 
+        Pada contoh di bawah, kita membuat sebuah fungsi async bernama asyncExample. 
+        Di dalam fungsi ini, kita menunggu hingga sebuah promise yang dikembalikan oleh 
+        fungsi someAsyncFunction di-resolve atau di-reject menggunakan kata kunci await. 
+        Kemudian, kita mencetak hasil dari promise tersebut ke konsol.
+        */
+
+        async function asyncExample() {
+            const promiseResult = await someAsyncFunction();
+            console.log(`Result: ${promiseResult}`);
+        }
+
+        asyncExample();
+
+        /* 
+        Pada contoh di bawah, kita menggunakan try-catch untuk menangani kondisi rejected 
+        dari promise. Jika promise di-reject, maka kode yang ada di dalam blok catch akan 
+        dieksekusi dan kita dapat menangani pesan error dari promise tersebut.
+        */
+
+        async function asyncExample() {
+            try {
+                const promiseResult = await someAsyncFunction();
+                console.log(`Result: ${promiseResult}`);
+            } catch (error) {
+                console.error(`Promise rejected with error: ${error.message}`);
+            }
+        }
+
+            asyncExample();
+
+            /*
+            Async/Await juga dapat digunakan bersama dengan Promise.all 
+            untuk mengeksekusi beberapa promise secara bersamaan dan 
+            menunggu sampai semua promise selesai.
+            */
+
+            async function asyncExample() {
+            const promise1 = someAsyncFunction();
+            const promise2 = anotherAsyncFunction();
+
+            const results = await Promise.all([promise1, promise2]);
+            console.log(results);
+            }
+
+            asyncExample();
+    </script>
+</body>
+</html>

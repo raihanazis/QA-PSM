@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Callback adalah salah satu konsep penting dalam JavaScript '
+        yang memungkinkan kita untuk memanggil sebuah fungsi ketika 
+        sebuah operasi telah selesai dilakukan atau terjadi suatu kejadian tertentu. 
+        */
+
+        /*
+        Pada contoh di bawah, kita akan menggunakan arrow function sebagai callback
+        yang akan dipanggil setelah 1 detik
+        */
+        setTimeout(() => {
+            console.log('Hello, World!');
+            }, 1000);
+        
+        /*
+        Pada contoh di bawah, callback menerima dua parameter, yaitu err dan data. 
+        Jika terjadi kesalahan dalam operasi pembacaan file, maka parameter err akan berisi objek 
+        error yang muncul, sedangkan jika operasi berhasil, maka parameter data akan berisi data 
+        yang telah dibaca dari file tersebut.
+        */  
+            const fs = require('fs');
+
+        fs.readFile('/path/to/file', (err, data) => {
+        if (err) {
+            console.error('Error:', err);
+            return;
+        }
+
+        console.log(data.toString());
+        });
+
+    </script>
+</body>
+</html>
